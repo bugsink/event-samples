@@ -1,0 +1,8 @@
+This repository contains some "event" (sentry-compatible) samples that can be used for testing.
+
+The events are sourced from the sentry and glitchtip codebases, as per the directory structure.
+
+Authorship and licensing information is as follows:
+
+* The files in the `glitchtip` directory are copyright by Glitchtip; MIT licenced.
+* The files in the `sentry` directory are copyright by Sentry; Apache 2.0 licenced.
