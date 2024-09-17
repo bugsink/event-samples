@@ -1,0 +1,54 @@
+{
+  "culprit": "sentry.tasks.post_process.post_process_group",
+  "event_id": "5ec2c82c95d14fffff123fffffc14a32",
+  "environment": "prod",
+  "platform": "python",
+  "logger": "sentry.safe.function",
+  "exception": {
+    "values": [
+      {
+        "stacktrace": {
+          "frames": []
+        },
+        "type": "ErrorWithContext",
+        "value": "Just an error I made up to test the 'contexts' field. Inspired by RTFM at https://develop.sentry.dev/sdk/event-payloads/contexts/",
+        "module": "requests.exceptions"
+      }
+    ]
+  },
+  "contexts": {
+    "browser": {
+      "type": "browser",
+      "name": "Chrome",
+      "version": "88.0.4324.150"
+    },
+    "os": {
+      "type": "os",
+      "name": "Windows",
+      "version": "10.0.19041",
+      "build": "630"
+    },
+    "runtime": {
+      "type": "runtime",
+      "name": "Python",
+      "version": "3.9.1",
+      "raw_description": "Python 3.9.1"
+    },
+    "device": {
+      "type": "device",
+      "family": "Other",
+      "model": "Unknown",
+      "model_id": "Unknown",
+      "arch": "AMD"
+    },
+    "trace": {
+      "type": "trace",
+      "trace_id": "5ec2c82c95d14fffff123f11ffc14a32",
+      "span_id": "5ec2c82c95d14fffff123f11ffc14a32",
+      "parent_span_id": "5ec2c82c95d14fffff123fffffc14a32",
+      "op": "default"
+    }
+  },
+  "release": "d0d3ffff630178c8f2836c2d2382dd534e9b47ac",
+  "timestamp": 1726518445.1311643
+}
