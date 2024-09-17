@@ -458,5 +458,6 @@
   "logentry": {
     "formatted": "Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArithmeticException: / by zero] with root cause"
   },
-  "release": null
+  "release": null,
+  "timestamp": 1726558445.104897
 }

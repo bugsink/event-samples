@@ -36,5 +36,6 @@
       }
     ]
   },
-  "release": "sentry@0.13.0"
+  "release": "sentry@0.13.0",
+  "timestamp": 1726558445.1305268
 }

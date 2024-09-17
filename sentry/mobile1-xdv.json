@@ -63,5 +63,6 @@
       }
     ]
   },
-  "platform": "cocoa"
+  "platform": "cocoa",
+  "timestamp": 1726558445.165757
 }

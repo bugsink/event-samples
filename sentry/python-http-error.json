@@ -97,5 +97,6 @@
     ],
     "formatted": "send_notification.process_error"
   },
-  "release": "d0d3f1ea630178c8f2836c2d2382dd534e9b47ac"
+  "release": "d0d3f1ea630178c8f2836c2d2382dd534e9b47ac",
+  "timestamp": 1726558445.1311643
 }

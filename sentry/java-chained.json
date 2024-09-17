@@ -453,5 +453,6 @@
   "logentry": {
     "formatted": "Failed to start connector [Connector[HTTP/1.1-8080]]"
   },
-  "release": null
+  "release": null,
+  "timestamp": 1726558445.1226692
 }
