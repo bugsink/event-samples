@@ -1,0 +1,762 @@
+{
+  "timestamp": 1726652563.945815,
+  "platform": "php",
+  "sdk": {
+    "name": "sentry.php.laravel",
+    "version": "4.8.0"
+  },
+  "server_name": "pop-os",
+  "environment": "local",
+  "modules": {
+    "brick/math": "0.12.1",
+    "carbonphp/carbon-doctrine-types": "2.1.0",
+    "dflydev/dot-access-data": "v3.0.3",
+    "doctrine/inflector": "2.0.10",
+    "doctrine/lexer": "3.0.1",
+    "dragonmantank/cron-expression": "v3.3.3",
+    "egulias/email-validator": "4.0.2",
+    "fakerphp/faker": "v1.23.1",
+    "filp/whoops": "2.15.4",
+    "fruitcake/php-cors": "v1.3.0",
+    "graham-campbell/result-type": "v1.1.3",
+    "guzzlehttp/guzzle": "7.9.2",
+    "guzzlehttp/promises": "2.0.3",
+    "guzzlehttp/psr7": "2.7.0",
+    "guzzlehttp/uri-template": "v1.0.3",
+    "hamcrest/hamcrest-php": "v2.0.1",
+    "jean85/pretty-package-versions": "2.0.6",
+    "laravel/framework": "v10.48.22",
+    "laravel/laravel": "1.0.0+no-version-set@{no ref",
+    "laravel/pint": "v1.17.3",
+    "laravel/prompts": "v0.1.25",
+    "laravel/sail": "v1.32.0",
+    "laravel/sanctum": "v3.3.3",
+    "laravel/serializable-closure": "v1.3.4",
+    "laravel/tinker": "v2.9.0",
+    "league/commonmark": "2.5.3",
+    "league/config": "v1.2.0",
+    "league/flysystem": "3.28.0",
+    "league/flysystem-local": "3.28.0",
+    "league/mime-type-detection": "1.15.0",
+    "mockery/mockery": "1.6.12",
+    "monolog/monolog": "3.7.0",
+    "myclabs/deep-copy": "1.12.0",
+    "nesbot/carbon": "2.72.5",
+    "nette/schema": "v1.3.0",
+    "nette/utils": "v4.0.5",
+    "nikic/php-parser": "v5.2.0",
+    "nunomaduro/collision": "v7.10.0",
+    "nunomaduro/termwind": "v1.15.1",
+    "nyholm/psr7": "1.8.2",
+    "phar-io/manifest": "2.0.4",
+    "phar-io/version": "3.2.1",
+    "phpoption/phpoption": "1.9.3",
+    "phpunit/php-code-coverage": "10.1.16",
+    "phpunit/php-file-iterator": "4.1.0",
+    "phpunit/php-invoker": "4.0.0",
+    "phpunit/php-text-template": "3.0.1",
+    "phpunit/php-timer": "6.0.0",
+    "phpunit/phpunit": "10.5.34",
+    "psr/clock": "1.0.0",
+    "psr/container": "2.0.2",
+    "psr/event-dispatcher": "1.0.0",
+    "psr/http-client": "1.0.3",
+    "psr/http-factory": "1.1.0",
+    "psr/http-message": "2.0",
+    "psr/log": "3.0.2",
+    "psr/simple-cache": "3.0.0",
+    "psy/psysh": "v0.12.4",
+    "ralouphie/getallheaders": "3.0.3",
+    "ramsey/collection": "2.0.0",
+    "ramsey/uuid": "4.7.6",
+    "sebastian/cli-parser": "2.0.1",
+    "sebastian/code-unit": "2.0.0",
+    "sebastian/code-unit-reverse-lookup": "3.0.0",
+    "sebastian/comparator": "5.0.2",
+    "sebastian/complexity": "3.2.0",
+    "sebastian/diff": "5.1.1",
+    "sebastian/environment": "6.1.0",
+    "sebastian/exporter": "5.1.2",
+    "sebastian/global-state": "6.0.2",
+    "sebastian/lines-of-code": "2.0.2",
+    "sebastian/object-enumerator": "5.0.0",
+    "sebastian/object-reflector": "3.0.0",
+    "sebastian/recursion-context": "5.0.0",
+    "sebastian/type": "4.0.0",
+    "sebastian/version": "4.0.1",
+    "sentry/sentry": "4.9.0",
+    "sentry/sentry-laravel": "4.8.0",
+    "spatie/backtrace": "1.6.2",
+    "spatie/error-solutions": "1.1.1",
+    "spatie/flare-client-php": "1.8.0",
+    "spatie/ignition": "1.15.0",
+    "spatie/laravel-ignition": "2.8.0",
+    "symfony/console": "v6.4.11",
+    "symfony/css-selector": "v6.4.8",
+    "symfony/deprecation-contracts": "v3.5.0",
+    "symfony/error-handler": "v6.4.10",
+    "symfony/event-dispatcher": "v6.4.8",
+    "symfony/event-dispatcher-contracts": "v3.5.0",
+    "symfony/finder": "v6.4.11",
+    "symfony/http-foundation": "v6.4.10",
+    "symfony/http-kernel": "v6.4.11",
+    "symfony/mailer": "v6.4.9",
+    "symfony/mime": "v6.4.11",
+    "symfony/options-resolver": "v6.4.8",
+    "symfony/polyfill-ctype": "v1.31.0",
+    "symfony/polyfill-intl-grapheme": "v1.31.0",
+    "symfony/polyfill-intl-idn": "v1.31.0",
+    "symfony/polyfill-intl-normalizer": "v1.31.0",
+    "symfony/polyfill-mbstring": "v1.31.0",
+    "symfony/polyfill-php80": "v1.31.0",
+    "symfony/polyfill-php83": "v1.31.0",
+    "symfony/polyfill-uuid": "v1.31.0",
+    "symfony/process": "v6.4.8",
+    "symfony/psr-http-message-bridge": "v6.4.11",
+    "symfony/routing": "v6.4.11",
+    "symfony/service-contracts": "v3.5.0",
+    "symfony/string": "v6.4.11",
+    "symfony/translation": "v6.4.10",
+    "symfony/translation-contracts": "v3.5.0",
+    "symfony/uid": "v6.4.11",
+    "symfony/var-dumper": "v6.4.11",
+    "symfony/yaml": "v6.4.11",
+    "theseer/tokenizer": "1.2.3",
+    "tijsverkoyen/css-to-inline-styles": "v2.2.7",
+    "vlucas/phpdotenv": "v5.6.1",
+    "voku/portable-ascii": "2.0.1",
+    "webmozart/assert": "1.11.0"
+  },
+  "contexts": {
+    "os": {
+      "name": "Linux",
+      "version": "6.9.3-76060903-generic",
+      "build": "#202405300957~1721174657~22.04~abb7c06 SMP PREEMPT_DYNAMIC Wed J",
+      "kernel_version": "Linux pop-os 6.9.3-76060903-generic #202405300957~1721174657~22.04~abb7c06 SMP PREEMPT_DYNAMIC Wed J x86_64"
+    },
+    "runtime": {
+      "name": "php",
+      "sapi": "cli",
+      "version": "8.1.2"
+    },
+    "trace": {
+      "trace_id": "eb8d74a82e684d549d5ae7acdc43739e",
+      "span_id": "a34b371d15ff4a54"
+    }
+  },
+  "exception": {
+    "values": [
+      {
+        "type": "Exception",
+        "value": "This is a test exception sent from the Sentry Laravel SDK.",
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "/artisan",
+              "lineno": 37,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/artisan",
+              "pre_context": [
+                "",
+                "$kernel = $app->make(Illuminate\\Contracts\\Console\\Kernel::class);",
+                "",
+                "$status = $kernel->handle(",
+                "    $input = new Symfony\\Component\\Console\\Input\\ArgvInput,"
+              ],
+              "context_line": "    new Symfony\\Component\\Console\\Output\\ConsoleOutput",
+              "post_context": [
+                ");",
+                "",
+                "/*",
+                "|--------------------------------------------------------------------------",
+                "| Shutdown The Application"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+              "lineno": 201,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+              "function": "Illuminate\\Foundation\\Console\\Kernel::handle",
+              "raw_function": "Illuminate\\Foundation\\Console\\Kernel::handle",
+              "pre_context": [
+                "                $this->bootstrapWithoutBootingProviders();",
+                "            }",
+                "",
+                "            $this->bootstrap();",
+                ""
+              ],
+              "context_line": "            return $this->getArtisan()->run($input, $output);",
+              "post_context": [
+                "        } catch (Throwable $e) {",
+                "            $this->reportException($e);",
+                "",
+                "            $this->renderException($output, $e);",
+                ""
+              ]
+            },
+            {
+              "filename": "/vendor/symfony/console/Application.php",
+              "lineno": 175,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/symfony/console/Application.php",
+              "function": "Symfony\\Component\\Console\\Application::run",
+              "raw_function": "Symfony\\Component\\Console\\Application::run",
+              "pre_context": [
+                "        }",
+                "",
+                "        $this->configureIO($input, $output);",
+                "",
+                "        try {"
+              ],
+              "context_line": "            $exitCode = $this->doRun($input, $output);",
+              "post_context": [
+                "        } catch (\\Throwable $e) {",
+                "            if ($e instanceof \\Exception && !$this->catchExceptions) {",
+                "                throw $e;",
+                "            }",
+                "            if (!$e instanceof \\Exception && !$this->catchErrors) {"
+              ]
+            },
+            {
+              "filename": "/vendor/symfony/console/Application.php",
+              "lineno": 324,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/symfony/console/Application.php",
+              "function": "Symfony\\Component\\Console\\Application::doRun",
+              "raw_function": "Symfony\\Component\\Console\\Application::doRun",
+              "pre_context": [
+                "        if ($command instanceof LazyCommand) {",
+                "            $command = $command->getCommand();",
+                "        }",
+                "",
+                "        $this->runningCommand = $command;"
+              ],
+              "context_line": "        $exitCode = $this->doRunCommand($command, $input, $output);",
+              "post_context": [
+                "        $this->runningCommand = null;",
+                "",
+                "        return $exitCode;",
+                "    }",
+                ""
+              ]
+            },
+            {
+              "filename": "/vendor/symfony/console/Application.php",
+              "lineno": 1096,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/symfony/console/Application.php",
+              "function": "Symfony\\Component\\Console\\Application::doRunCommand",
+              "raw_function": "Symfony\\Component\\Console\\Application::doRunCommand",
+              "pre_context": [
+                "",
+                "        try {",
+                "            $this->dispatcher->dispatch($event, ConsoleEvents::COMMAND);",
+                "",
+                "            if ($event->commandShouldRun()) {"
+              ],
+              "context_line": "                $exitCode = $command->run($input, $output);",
+              "post_context": [
+                "            } else {",
+                "                $exitCode = ConsoleCommandEvent::RETURN_CODE_DISABLED;",
+                "            }",
+                "        } catch (\\Throwable $e) {",
+                "            $event = new ConsoleErrorEvent($input, $output, $e, $command);"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "lineno": 181,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "function": "Illuminate\\Console\\Command::run",
+              "raw_function": "Illuminate\\Console\\Command::run",
+              "pre_context": [
+                "",
+                "        $this->configurePrompts($input);",
+                "",
+                "        try {",
+                "            return parent::run("
+              ],
+              "context_line": "                $this->input = $input, $this->output",
+              "post_context": [
+                "            );",
+                "        } finally {",
+                "            $this->untrap();",
+                "        }",
+                "    }"
+              ]
+            },
+            {
+              "filename": "/vendor/symfony/console/Command/Command.php",
+              "lineno": 326,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/symfony/console/Command/Command.php",
+              "function": "Symfony\\Component\\Console\\Command\\Command::run",
+              "raw_function": "Symfony\\Component\\Console\\Command\\Command::run",
+              "pre_context": [
+                "        $input->validate();",
+                "",
+                "        if ($this->code) {",
+                "            $statusCode = ($this->code)($input, $output);",
+                "        } else {"
+              ],
+              "context_line": "            $statusCode = $this->execute($input, $output);",
+              "post_context": [
+                "",
+                "            if (!\\is_int($statusCode)) {",
+                "                throw new \\TypeError(sprintf('Return value of \"%s::execute()\" must be of the type int, \"%s\" returned.', static::class, get_debug_type($statusCode)));",
+                "            }",
+                "        }"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "lineno": 211,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "function": "Illuminate\\Console\\Command::execute",
+              "raw_function": "Illuminate\\Console\\Command::execute",
+              "pre_context": [
+                "        }",
+                "",
+                "        $method = method_exists($this, 'handle') ? 'handle' : '__invoke';",
+                "",
+                "        try {"
+              ],
+              "context_line": "            return (int) $this->laravel->call([$this, $method]);",
+              "post_context": [
+                "        } finally {",
+                "            if ($this instanceof Isolatable && $this->option('isolated') !== false) {",
+                "                $this->commandIsolationMutex()->forget($this);",
+                "            }",
+                "        }"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+              "lineno": 662,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+              "function": "Illuminate\\Container\\Container::call",
+              "raw_function": "Illuminate\\Container\\Container::call",
+              "pre_context": [
+                "            $this->buildStack[] = $className;",
+                "",
+                "            $pushedToBuildStack = true;",
+                "        }",
+                ""
+              ],
+              "context_line": "        $result = BoundMethod::call($this, $callback, $parameters, $defaultMethod);",
+              "post_context": [
+                "",
+                "        if ($pushedToBuildStack) {",
+                "            array_pop($this->buildStack);",
+                "        }",
+                ""
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 37,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::call",
+              "raw_function": "Illuminate\\Container\\BoundMethod::call",
+              "pre_context": [
+                "            return static::callClass($container, $callback, $parameters, $defaultMethod);",
+                "        }",
+                "",
+                "        return static::callBoundMethod($container, $callback, function () use ($container, $callback, $parameters) {",
+                "            return $callback(...array_values(static::getMethodDependencies($container, $callback, $parameters)));"
+              ],
+              "context_line": "        });",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Call a string reference to a class using Class@method syntax.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 93,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::callBoundMethod",
+              "raw_function": "Illuminate\\Container\\BoundMethod::callBoundMethod",
+              "pre_context": [
+                "",
+                "        if ($container->hasMethodBinding($method)) {",
+                "            return $container->callMethodBinding($method, $callback[0]);",
+                "        }",
+                ""
+              ],
+              "context_line": "        return Util::unwrapIfClosure($default);",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Normalize the given callback into a Class@method string.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+              "lineno": 41,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+              "function": "Illuminate\\Container\\Util::unwrapIfClosure",
+              "raw_function": "Illuminate\\Container\\Util::unwrapIfClosure",
+              "pre_context": [
+                "     * @param  mixed  ...$args",
+                "     * @return mixed",
+                "     */",
+                "    public static function unwrapIfClosure($value, ...$args)",
+                "    {"
+              ],
+              "context_line": "        return $value instanceof Closure ? $value(...$args) : $value;",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Get the class name of the given parameter's type, if possible.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 36,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}",
+              "raw_function": "Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}",
+              "pre_context": [
+                "        if (static::isCallableWithAtSign($callback) || $defaultMethod) {",
+                "            return static::callClass($container, $callback, $parameters, $defaultMethod);",
+                "        }",
+                "",
+                "        return static::callBoundMethod($container, $callback, function () use ($container, $callback, $parameters) {"
+              ],
+              "context_line": "            return $callback(...array_values(static::getMethodDependencies($container, $callback, $parameters)));",
+              "post_context": [
+                "        });",
+                "    }",
+                "",
+                "    /**",
+                "     * Call a string reference to a class using Class@method syntax."
+              ]
+            },
+            {
+              "filename": "/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/PublishCommand.php",
+              "lineno": 78,
+              "in_app": true,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/PublishCommand.php",
+              "function": "Sentry\\Laravel\\Console\\PublishCommand::handle",
+              "raw_function": "Sentry\\Laravel\\Console\\PublishCommand::handle",
+              "pre_context": [
+                "        } elseif ($this->isEnvKeySet('SENTRY_TRACES_SAMPLE_RATE')) {",
+                "            $env['SENTRY_TRACES_SAMPLE_RATE'] = '0';",
+                "        }",
+                "",
+                "        if ($this->confirm($testCommandPrompt, !$this->option('without-test'))) {"
+              ],
+              "context_line": "            $testResult = $this->call('sentry:test', $arg);",
+              "post_context": [
+                "",
+                "            if ($testResult === 1) {",
+                "                return 1;",
+                "            }",
+                "        }"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php",
+              "lineno": 28,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php",
+              "function": "Illuminate\\Console\\Command::call",
+              "raw_function": "Illuminate\\Console\\Command::call",
+              "pre_context": [
+                "     * @param  array  $arguments",
+                "     * @return int",
+                "     */",
+                "    public function call($command, array $arguments = [])",
+                "    {"
+              ],
+              "context_line": "        return $this->runCommand($command, $arguments, $this->output);",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Call another console command without output.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php",
+              "lineno": 68,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php",
+              "function": "Illuminate\\Console\\Command::runCommand",
+              "raw_function": "Illuminate\\Console\\Command::runCommand",
+              "pre_context": [
+                "    protected function runCommand($command, array $arguments, OutputInterface $output)",
+                "    {",
+                "        $arguments['command'] = $command;",
+                "",
+                "        $result = $this->resolveCommand($command)->run("
+              ],
+              "context_line": "            $this->createInputFromArguments($arguments), $output",
+              "post_context": [
+                "        );",
+                "",
+                "        $this->restorePrompts();",
+                "",
+                "        return $result;"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "lineno": 181,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "function": "Illuminate\\Console\\Command::run",
+              "raw_function": "Illuminate\\Console\\Command::run",
+              "pre_context": [
+                "",
+                "        $this->configurePrompts($input);",
+                "",
+                "        try {",
+                "            return parent::run("
+              ],
+              "context_line": "                $this->input = $input, $this->output",
+              "post_context": [
+                "            );",
+                "        } finally {",
+                "            $this->untrap();",
+                "        }",
+                "    }"
+              ]
+            },
+            {
+              "filename": "/vendor/symfony/console/Command/Command.php",
+              "lineno": 326,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/symfony/console/Command/Command.php",
+              "function": "Symfony\\Component\\Console\\Command\\Command::run",
+              "raw_function": "Symfony\\Component\\Console\\Command\\Command::run",
+              "pre_context": [
+                "        $input->validate();",
+                "",
+                "        if ($this->code) {",
+                "            $statusCode = ($this->code)($input, $output);",
+                "        } else {"
+              ],
+              "context_line": "            $statusCode = $this->execute($input, $output);",
+              "post_context": [
+                "",
+                "            if (!\\is_int($statusCode)) {",
+                "                throw new \\TypeError(sprintf('Return value of \"%s::execute()\" must be of the type int, \"%s\" returned.', static::class, get_debug_type($statusCode)));",
+                "            }",
+                "        }"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "lineno": 211,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+              "function": "Illuminate\\Console\\Command::execute",
+              "raw_function": "Illuminate\\Console\\Command::execute",
+              "pre_context": [
+                "        }",
+                "",
+                "        $method = method_exists($this, 'handle') ? 'handle' : '__invoke';",
+                "",
+                "        try {"
+              ],
+              "context_line": "            return (int) $this->laravel->call([$this, $method]);",
+              "post_context": [
+                "        } finally {",
+                "            if ($this instanceof Isolatable && $this->option('isolated') !== false) {",
+                "                $this->commandIsolationMutex()->forget($this);",
+                "            }",
+                "        }"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+              "lineno": 662,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+              "function": "Illuminate\\Container\\Container::call",
+              "raw_function": "Illuminate\\Container\\Container::call",
+              "pre_context": [
+                "            $this->buildStack[] = $className;",
+                "",
+                "            $pushedToBuildStack = true;",
+                "        }",
+                ""
+              ],
+              "context_line": "        $result = BoundMethod::call($this, $callback, $parameters, $defaultMethod);",
+              "post_context": [
+                "",
+                "        if ($pushedToBuildStack) {",
+                "            array_pop($this->buildStack);",
+                "        }",
+                ""
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 37,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::call",
+              "raw_function": "Illuminate\\Container\\BoundMethod::call",
+              "pre_context": [
+                "            return static::callClass($container, $callback, $parameters, $defaultMethod);",
+                "        }",
+                "",
+                "        return static::callBoundMethod($container, $callback, function () use ($container, $callback, $parameters) {",
+                "            return $callback(...array_values(static::getMethodDependencies($container, $callback, $parameters)));"
+              ],
+              "context_line": "        });",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Call a string reference to a class using Class@method syntax.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 93,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::callBoundMethod",
+              "raw_function": "Illuminate\\Container\\BoundMethod::callBoundMethod",
+              "pre_context": [
+                "",
+                "        if ($container->hasMethodBinding($method)) {",
+                "            return $container->callMethodBinding($method, $callback[0]);",
+                "        }",
+                ""
+              ],
+              "context_line": "        return Util::unwrapIfClosure($default);",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Normalize the given callback into a Class@method string.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+              "lineno": 41,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+              "function": "Illuminate\\Container\\Util::unwrapIfClosure",
+              "raw_function": "Illuminate\\Container\\Util::unwrapIfClosure",
+              "pre_context": [
+                "     * @param  mixed  ...$args",
+                "     * @return mixed",
+                "     */",
+                "    public static function unwrapIfClosure($value, ...$args)",
+                "    {"
+              ],
+              "context_line": "        return $value instanceof Closure ? $value(...$args) : $value;",
+              "post_context": [
+                "    }",
+                "",
+                "    /**",
+                "     * Get the class name of the given parameter's type, if possible.",
+                "     *"
+              ]
+            },
+            {
+              "filename": "/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "lineno": 36,
+              "in_app": false,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+              "function": "Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}",
+              "raw_function": "Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}",
+              "pre_context": [
+                "        if (static::isCallableWithAtSign($callback) || $defaultMethod) {",
+                "            return static::callClass($container, $callback, $parameters, $defaultMethod);",
+                "        }",
+                "",
+                "        return static::callBoundMethod($container, $callback, function () use ($container, $callback, $parameters) {"
+              ],
+              "context_line": "            return $callback(...array_values(static::getMethodDependencies($container, $callback, $parameters)));",
+              "post_context": [
+                "        });",
+                "    }",
+                "",
+                "    /**",
+                "     * Call a string reference to a class using Class@method syntax."
+              ]
+            },
+            {
+              "filename": "/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/TestCommand.php",
+              "lineno": 162,
+              "in_app": true,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/TestCommand.php",
+              "function": "Sentry\\Laravel\\Console\\TestCommand::handle",
+              "raw_function": "Sentry\\Laravel\\Console\\TestCommand::handle",
+              "pre_context": [
+                "        // We create a new Hub and Client to prevent user configuration from affecting the test command",
+                "        $hub = new Hub($clientBuilder->getClient());",
+                "",
+                "        $this->info('Sending test event...');",
+                ""
+              ],
+              "context_line": "        $exception = $this->generateTestException($this->name, ['foo' => 'bar']);",
+              "post_context": [
+                "",
+                "        $eventId = $hub->captureException($exception);",
+                "",
+                "        if (!$eventId) {",
+                "            $this->error('There was an error sending the event.');"
+              ]
+            },
+            {
+              "filename": "/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/TestCommand.php",
+              "lineno": 222,
+              "in_app": true,
+              "abs_path": "/mnt/datacrypt/dev/laravel-experiments/example-app/vendor/sentry/sentry-laravel/src/Sentry/Laravel/Console/TestCommand.php",
+              "function": "Sentry\\Laravel\\Console\\TestCommand::generateTestException",
+              "raw_function": "Sentry\\Laravel\\Console\\TestCommand::generateTestException",
+              "pre_context": [
+                "     */",
+                "    protected function generateTestException(string $command, array $arg): Exception",
+                "    {",
+                "        // Do something silly",
+                "        try {"
+              ],
+              "context_line": "            throw new Exception('This is a test exception sent from the Sentry Laravel SDK.');",
+              "post_context": [
+                "        } catch (Exception $exception) {",
+                "            return $exception;",
+                "        }",
+                "    }",
+                ""
+              ]
+            }
+          ]
+        },
+        "mechanism": {
+          "type": "generic",
+          "handled": true,
+          "data": {
+            "code": 0
+          }
+        }
+      }
+    ]
+  }
+}
