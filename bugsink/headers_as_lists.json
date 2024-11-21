@@ -1,0 +1,287 @@
+{
+  "event_id": "8af12f525f12783f01270f406ffe03bd",
+  "timestamp": "2020-04-18T21:44:00.206155+00:00",
+  "logentry": {
+    "message": "An unhandled exception has occurred while executing the request.",
+    "formatted": "An unhandled exception has occurred while executing the request."
+  },
+  "logger": "Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware",
+  "platform": "csharp",
+  "server_name": "pop-os",
+  "exception": {
+    "values": [
+      {
+        "type": "System.NullReferenceException",
+        "value": "Object reference not set to an instance of an object.",
+        "module": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "thread_id": 28,
+        "stacktrace": {
+          "frames": [
+            {
+              "function": "Invoke",
+              "module": "Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Diagnostics, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Invoke",
+              "module": "Microsoft.AspNetCore.Authorization.AuthorizationMiddleware",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Authorization.Policy, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "MoveNext",
+              "module": "Microsoft.AspNetCore.Routing.EndpointMiddleware+<<Invoke>g__AwaitRequestTask|6_0>d",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Routing, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "MoveNext",
+              "module": "Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker+<<InvokeAsync>g__Awaited|17_0>d",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.Core, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "InvokeFilterPipelineAsync",
+              "module": "Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.Core, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Next",
+              "module": "Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.Core, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Rethrow",
+              "module": "Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.Core, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "MoveNext",
+              "module": "Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker+<<InvokeNextResourceFilter>g__Awaited|24_0>d",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.Core, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "InvokeInnerFilterAsync",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Next",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Rethrow",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "InvokeNextPageFilterAsync",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "HandleNonSuccessAndDebuggerNotification",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "ThrowForNonSuccess",
+              "module": "System.Runtime.CompilerServices.TaskAwaiter",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "Throw",
+              "module": "System.Runtime.ExceptionServices.ExceptionDispatchInfo",
+              "in_app": false,
+              "package": "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+            },
+            {
+              "function": "InvokeHandlerMethodAsync",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "function": "Execute",
+              "module": "Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.ExecutorFactory+VoidHandlerMethod",
+              "in_app": false,
+              "package": "Microsoft.AspNetCore.Mvc.RazorPages, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60"
+            },
+            {
+              "filename": "/home/david/Projects/dotnet-error-factory/myWebApp/Pages/Index.cshtml.cs",
+              "function": "OnGet",
+              "module": "myWebApp.Pages.IndexModel",
+              "lineno": 22,
+              "colno": 6,
+              "in_app": true,
+              "package": "myWebApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "contexts": {
+    "server-runtime": {
+      "type": "runtime",
+      "name": ".NET Core",
+      "version": "3.1.3",
+      "raw_description": ".NET Core 3.1.3"
+    },
+    "server-os": {
+      "type": "os",
+      "raw_description": "Linux 5.3.0-24201912051620-generic #0+mediatree+hauppauge-Ubuntu SMP Fri Dec 6 00:31:58 UTC 2019"
+    }
+  },
+  "request": {
+    "env": {
+      "DOCUMENT_ROOT": "/home/david/Projects/dotnet-error-factory/myWebApp/wwwroot",
+      "SERVER_NAME": "pop-os",
+      "SERVER_PORT": "5000"
+    },
+    "headers": {
+      "Cache-Control": ["max-age=0"],
+      "Connection": ["keep-alive"],
+      "Accept": ["text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"],
+      "Accept-Encoding": ["gzip, deflate"],
+      "Accept-Language": ["en-US,en;q=0.5"],
+      "Host": ["localhost:5000"],
+      "User-Agent": ["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"],
+      "Upgrade-Insecure-Requests": "1"
+    },
+    "url": "http://localhost:5000/",
+    "method": "GET",
+    "query_string": ""
+  },
+  "tags": {
+    "RequestId": "0HLV3RSN8TGA6:00000002",
+    "TraceId": "ca320d7c-4b7d78ddc6e8484d",
+    "eventId": "UnhandledException",
+    "SpanId": "|ca320d7c-4b7d78ddc6e8484d.",
+    "ConnectionId": "0HLV3RSN8TGA6"
+  },
+  "level": "error",
+  "environment": "Development",
+  "sdk": {
+    "packages": [
+      { "name": "nuget:Sentry", "version": "2.1.1" },
+      { "name": "nuget:Sentry.AspNetCore", "version": "2.1.1" }
+    ],
+    "name": "sentry.dotnet.aspnetcore",
+    "version": "2.1.1"
+  }
+}
