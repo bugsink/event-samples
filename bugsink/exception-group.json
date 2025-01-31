@@ -1,0 +1,336 @@
+{
+  "level": "error",
+  "exception": {
+    "values": [
+      {
+        "mechanism": {
+          "type": "chained",
+          "handled": false,
+          "exception_id": 5,
+          "source": "exceptions[2]",
+          "parent_id": 0
+        },
+        "module": null,
+        "type": "TypeError",
+        "value": "int"
+      },
+      {
+        "mechanism": {
+          "type": "chained",
+          "handled": false,
+          "exception_id": 4,
+          "source": "exceptions[1]",
+          "parent_id": 2
+        },
+        "module": null,
+        "type": "ModuleNotFoundError",
+        "value": "another.module"
+      },
+      {
+        "mechanism": {
+          "type": "chained",
+          "handled": false,
+          "exception_id": 3,
+          "source": "exceptions[0]",
+          "parent_id": 2
+        },
+        "module": null,
+        "type": "ImportError",
+        "value": "no.such.module"
+      },
+      {
+        "mechanism": {
+          "type": "chained",
+          "handled": false,
+          "exception_id": 2,
+          "source": "exceptions[1]",
+          "parent_id": 0,
+          "is_exception_group": true
+        },
+        "module": null,
+        "type": "ExceptionGroup",
+        "value": "imports"
+      },
+      {
+        "mechanism": {
+          "type": "chained",
+          "handled": false,
+          "exception_id": 1,
+          "source": "exceptions[0]",
+          "parent_id": 0
+        },
+        "module": null,
+        "type": "ValueError",
+        "value": "123"
+      },
+      {
+        "mechanism": {
+          "type": "excepthook",
+          "handled": false,
+          "exception_id": 0,
+          "is_exception_group": true
+        },
+        "module": null,
+        "type": "ExceptionGroup",
+        "value": "nested",
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "dsnrun",
+              "abs_path": "/tmp/egvenv/bin/dsnrun",
+              "function": "<module>",
+              "module": "__main__",
+              "lineno": 8,
+              "pre_context": [
+                "import re",
+                "import sys",
+                "from dsnrun.scripts.dsnrun import main",
+                "if __name__ == '__main__':",
+                "    sys.argv[0] = re.sub(r'(-script\\.pyw|\\.exe)?$', '', sys.argv[0])"
+              ],
+              "context_line": "    sys.exit(main())",
+              "post_context": [],
+              "vars": {
+                "__name__": "'__main__'",
+                "__doc__": "None",
+                "__package__": "None",
+                "__loader__": "<_frozen_importlib_external.SourceFileLoader object at 0x746904900410>",
+                "__spec__": "None",
+                "__annotations__": {},
+                "__builtins__": "<module 'builtins' (built-in)>",
+                "__file__": "'/tmp/egvenv/bin/dsnrun'",
+                "__cached__": "None",
+                "re": "<module 're' from '/usr/lib/python3.12/re/__init__.py'>"
+              },
+              "in_app": true
+            },
+            {
+              "filename": "dsnrun/scripts/dsnrun.py",
+              "abs_path": "/tmp/egvenv/lib/python3.12/site-packages/dsnrun/scripts/dsnrun.py",
+              "function": "main",
+              "module": "dsnrun.scripts.dsnrun",
+              "lineno": 79,
+              "pre_context": [
+                "        module = _safe_pop(args, \"No module provided after -m\")",
+                "        sys.argv = [module] + args  # \"as good as it gets\"",
+                "        runpy.run_module(module, run_name=\"__main__\")",
+                "    else:",
+                "        sys.argv = [arg] + args"
+              ],
+              "context_line": "        runpy.run_path(arg, run_name=\"__main__\")",
+              "post_context": [
+                "",
+                "",
+                "if __name__ == \"__main__\":",
+                "    main()"
+              ],
+              "vars": {
+                "args": [],
+                "SENTRY_DSN": "'https://fc3a8bef4eec4db986cf33ef33f02f48@dogfood.bugsink.com/2'",
+                "arg": "'/tmp/exceptiongroup.py'"
+              },
+              "in_app": false
+            },
+            {
+              "filename": "<frozen runpy>",
+              "abs_path": "/tmp/<frozen runpy>",
+              "function": "run_path",
+              "module": "runpy",
+              "lineno": 286,
+              "pre_context": [],
+              "context_line": null,
+              "post_context": [],
+              "vars": {
+                "path_name": "'/tmp/exceptiongroup.py'",
+                "init_globals": "None",
+                "run_name": "'__main__'",
+                "pkg_name": "''",
+                "get_importer": "<function get_importer at 0x746903b43c40>",
+                "importer": "None",
+                "code": "<code object <module> at 0x746903d2ed30, file \"/tmp/exceptiongroup.py\", line 1>",
+                "fname": "'/tmp/exceptiongroup.py'"
+              },
+              "in_app": true
+            },
+            {
+              "filename": "<frozen runpy>",
+              "abs_path": "/tmp/<frozen runpy>",
+              "function": "_run_module_code",
+              "module": "runpy",
+              "lineno": 98,
+              "pre_context": [],
+              "context_line": null,
+              "post_context": [],
+              "vars": {
+                "code": "<code object <module> at 0x746903d2ed30, file \"/tmp/exceptiongroup.py\", line 1>",
+                "init_globals": "None",
+                "mod_name": "'__main__'",
+                "mod_spec": "None",
+                "pkg_name": "''",
+                "script_name": "'/tmp/exceptiongroup.py'",
+                "fname": "'/tmp/exceptiongroup.py'",
+                "temp_module": "<runpy._TempModule object at 0x746903cdf9b0>",
+                "mod_globals": {
+                  "__name__": "'__main__'",
+                  "__doc__": "None",
+                  "__package__": "''",
+                  "__loader__": "None",
+                  "__spec__": "None",
+                  "__file__": "'/tmp/exceptiongroup.py'",
+                  "__cached__": "None",
+                  "__builtins__": {
+                    "__name__": "'builtins'",
+                    "__doc__": "\"Built-in functions, types, exceptions, and other objects.\\n\\nThis module provides direct access to all 'built-in'\\nidentifiers of Python; for example, builtins.len is\\nthe full name for the built-in function len().\\n\\nThis module is not normally accessed explicitly by most\\napplications, but can be useful in modules that provide\\nobjects with the same name as a built-in value, but in\\nwhich the built-in of that name is also needed.\"",
+                    "__package__": "''",
+                    "__loader__": "<class '_frozen_importlib.BuiltinImporter'>",
+                    "__spec__": "ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in')",
+                    "__build_class__": "<built-in function __build_class__>",
+                    "__import__": "<built-in function __import__>",
+                    "abs": "<built-in function abs>",
+                    "all": "<built-in function all>",
+                    "any": "<built-in function any>"
+                  }
+                }
+              },
+              "in_app": true
+            },
+            {
+              "filename": "<frozen runpy>",
+              "abs_path": "/tmp/<frozen runpy>",
+              "function": "_run_code",
+              "module": "runpy",
+              "lineno": 88,
+              "pre_context": [],
+              "context_line": null,
+              "post_context": [],
+              "vars": {
+                "code": "<code object <module> at 0x746903d2ed30, file \"/tmp/exceptiongroup.py\", line 1>",
+                "run_globals": {
+                  "__name__": "'__main__'",
+                  "__doc__": "None",
+                  "__package__": "''",
+                  "__loader__": "None",
+                  "__spec__": "None",
+                  "__file__": "'/tmp/exceptiongroup.py'",
+                  "__cached__": "None",
+                  "__builtins__": {
+                    "__name__": "'builtins'",
+                    "__doc__": "\"Built-in functions, types, exceptions, and other objects.\\n\\nThis module provides direct access to all 'built-in'\\nidentifiers of Python; for example, builtins.len is\\nthe full name for the built-in function len().\\n\\nThis module is not normally accessed explicitly by most\\napplications, but can be useful in modules that provide\\nobjects with the same name as a built-in value, but in\\nwhich the built-in of that name is also needed.\"",
+                    "__package__": "''",
+                    "__loader__": "<class '_frozen_importlib.BuiltinImporter'>",
+                    "__spec__": "ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in')",
+                    "__build_class__": "<built-in function __build_class__>",
+                    "__import__": "<built-in function __import__>",
+                    "abs": "<built-in function abs>",
+                    "all": "<built-in function all>",
+                    "any": "<built-in function any>"
+                  }
+                },
+                "init_globals": "None",
+                "mod_name": "'__main__'",
+                "mod_spec": "None",
+                "pkg_name": "''",
+                "script_name": "'/tmp/exceptiongroup.py'",
+                "loader": "None",
+                "fname": "'/tmp/exceptiongroup.py'",
+                "cached": "None"
+              },
+              "in_app": true
+            },
+            {
+              "filename": "exceptiongroup.py",
+              "abs_path": "/tmp/exceptiongroup.py",
+              "function": "<module>",
+              "module": "__main__",
+              "lineno": 1,
+              "pre_context": [],
+              "context_line": "raise ExceptionGroup(\"nested\",",
+              "post_context": [
+                "    [",
+                "        ValueError(123),",
+                "        ExceptionGroup(\"imports\",",
+                "            [",
+                "                ImportError(\"no.such.module\"),"
+              ],
+              "vars": {
+                "__name__": "'__main__'",
+                "__doc__": "None",
+                "__package__": "''",
+                "__loader__": "None",
+                "__spec__": "None",
+                "__file__": "'/tmp/exceptiongroup.py'",
+                "__cached__": "None",
+                "__builtins__": {
+                  "__name__": "'builtins'",
+                  "__doc__": "\"Built-in functions, types, exceptions, and other objects.\\n\\nThis module provides direct access to all 'built-in'\\nidentifiers of Python; for example, builtins.len is\\nthe full name for the built-in function len().\\n\\nThis module is not normally accessed explicitly by most\\napplications, but can be useful in modules that provide\\nobjects with the same name as a built-in value, but in\\nwhich the built-in of that name is also needed.\"",
+                  "__package__": "''",
+                  "__loader__": "<class '_frozen_importlib.BuiltinImporter'>",
+                  "__spec__": "ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in')",
+                  "__build_class__": "<built-in function __build_class__>",
+                  "__import__": "<built-in function __import__>",
+                  "abs": "<built-in function abs>",
+                  "all": "<built-in function all>",
+                  "any": "<built-in function any>"
+                }
+              },
+              "in_app": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "event_id": "15dc24827c1c44439790201c7d92e34c",
+  "timestamp": "2025-01-31T11:02:57.988959Z",
+  "contexts": {
+    "trace": {
+      "trace_id": "628f2dacebe64511a4f36aeabdee5d17",
+      "span_id": "990b6b97bc863d80",
+      "parent_span_id": null
+    },
+    "runtime": {
+      "name": "CPython",
+      "version": "3.12.3",
+      "build": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]"
+    }
+  },
+  "transaction_info": {},
+  "breadcrumbs": {
+    "values": []
+  },
+  "extra": {
+    "sys.argv": [
+      "/tmp/exceptiongroup.py"
+    ]
+  },
+  "modules": {
+    "sentry-sdk": "2.20.0",
+    "certifi": "2025.1.31",
+    "pip": "24.0",
+    "dsnrun": "0.1.0",
+    "urllib3": "2.3.0"
+  },
+  "environment": "production",
+  "server_name": "hamster",
+  "sdk": {
+    "name": "sentry.python",
+    "version": "2.20.0",
+    "packages": [
+      {
+        "name": "pypi:sentry-sdk",
+        "version": "2.20.0"
+      }
+    ],
+    "integrations": [
+      "argv",
+      "atexit",
+      "dedupe",
+      "excepthook",
+      "logging",
+      "modules",
+      "stdlib",
+      "threading"
+    ]
+  },
+  "platform": "python"
+}
