@@ -1,0 +1,789 @@
+{
+  "level": "error",
+  "logger": "events.tasks",
+  "logentry": {
+    "message": "Error during cleanup of %(one)s: %(two)s",
+    "params": {
+      "one": "<StorageCleanupTodo: StorageCleanupTodo(74e45def-dd8e-4b7a-b5a7-fab97a534875, local_flat_files)>",
+      "two": "AttributeError(\"'StorageCleanupTodo' object has no attribute 'storage_name'\")"
+    }
+  },
+  "extra": {
+    "sys.argv": [
+      "manage.py",
+      "runserver",
+      "127.0.0.1:8000",
+      "--settings=bugsink.settings.development"
+    ]
+  },
+  "event_id": "954b22297314490d9d48579dc18a442e",
+  "timestamp": "2025-02-12T11:18:59.039703Z",
+  "contexts": {
+    "trace": {
+      "trace_id": "7fecdff17c244458933486537880b4d5",
+      "span_id": "ae64fe323b77b39e",
+      "parent_span_id": "a0bff1d45ee0b99c",
+      "op": "view.render",
+      "description": "ingest.views.IngestEnvelopeAPIView",
+      "origin": "auto.http.django",
+      "data": {
+        "thread.id": "129186037499456",
+        "thread.name": "Thread-2 (process_request_thread)"
+      }
+    },
+    "runtime": {
+      "name": "CPython",
+      "version": "3.10.12",
+      "build": "3.10.12 (main, Nov  6 2024, 20:22:13) [GCC 11.4.0]"
+    }
+  },
+  "transaction": "/api/{project_pk}/envelope/",
+  "transaction_info": {
+    "source": "route"
+  },
+  "breadcrumbs": {
+    "values": [
+      {
+        "message": "connect",
+        "category": "query",
+        "timestamp": "2025-02-12T11:18:58.763388Z",
+        "type": "default"
+      },
+      {
+        "message": "PRAGMA synchronous = NORMAL;",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.765462Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"projects_project\".\"id\", \"projects_project\".\"team_id\", \"projects_project\".\"name\", \"projects_project\".\"slug\", \"projects_project\".\"sentry_key\", \"projects_project\".\"has_releases\", \"projects_project\".\"digested_event_count\", \"projects_project\".\"stored_event_count\", \"projects_project\".\"alert_on_new_issue\", \"projects_project\".\"alert_on_regression\", \"projects_project\".\"alert_on_unmute\", \"projects_project\".\"visibility\", \"projects_project\".\"quota_exceeded_until\", \"projects_project\".\"next_quota_check\", \"projects_project\".\"retention_max_event_count\" FROM \"projects_project\" WHERE (\"projects_project\".\"id\" = %s AND \"projects_project\".\"sentry_key\" = %s) LIMIT 21",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.767429Z",
+        "type": "default"
+      },
+      {
+        "type": "log",
+        "level": "info",
+        "category": "bugsink.performance.ingest",
+        "message": "ingested event with 40746 bytes",
+        "timestamp": "2025-02-12T11:18:58.771665Z",
+        "data": {}
+      },
+      {
+        "message": "BEGIN IMMEDIATE",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.773413Z",
+        "type": "default"
+      },
+      {
+        "type": "log",
+        "level": "info",
+        "category": "bugsink.performance.db",
+        "message": "  0.35ms BEGIN IMMEDIATE, A.K.A. get-write-lock",
+        "timestamp": "2025-02-12T11:18:58.773607Z",
+        "data": {}
+      },
+      {
+        "message": "SELECT \"projects_project\".\"id\", \"projects_project\".\"team_id\", \"projects_project\".\"name\", \"projects_project\".\"slug\", \"projects_project\".\"sentry_key\", \"projects_project\".\"has_releases\", \"projects_project\".\"digested_event_count\", \"projects_project\".\"stored_event_count\", \"projects_project\".\"alert_on_new_issue\", \"projects_project\".\"alert_on_regression\", \"projects_project\".\"alert_on_unmute\", \"projects_project\".\"visibility\", \"projects_project\".\"quota_exceeded_until\", \"projects_project\".\"next_quota_check\", \"projects_project\".\"retention_max_event_count\" FROM \"projects_project\" WHERE \"projects_project\".\"id\" = %s LIMIT 21",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.775242Z",
+        "type": "default"
+      },
+      {
+        "message": "UPDATE \"projects_project\" SET \"team_id\" = %s, \"name\" = %s, \"slug\" = %s, \"sentry_key\" = %s, \"has_releases\" = %s, \"digested_event_count\" = %s, \"stored_event_count\" = %s, \"alert_on_new_issue\" = %s, \"alert_on_regression\" = %s, \"alert_on_unmute\" = %s, \"visibility\" = %s, \"quota_exceeded_until\" = NULL, \"next_quota_check\" = %s, \"retention_max_event_count\" = %s WHERE \"projects_project\".\"id\" = %s",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.778465Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT %s AS \"a\" FROM \"issues_grouping\" WHERE (\"issues_grouping\".\"grouping_key\" = %s AND \"issues_grouping\".\"project_id\" = %s) LIMIT 1",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.787385Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"issues_grouping\".\"id\", \"issues_grouping\".\"project_id\", \"issues_grouping\".\"grouping_key\", \"issues_grouping\".\"issue_id\" FROM \"issues_grouping\" WHERE (\"issues_grouping\".\"grouping_key\" = %s AND \"issues_grouping\".\"project_id\" = %s) LIMIT 21",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.789764Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"issues_issue\".\"id\", \"issues_issue\".\"project_id\", \"issues_issue\".\"digest_order\", \"issues_issue\".\"last_seen\", \"issues_issue\".\"first_seen\", \"issues_issue\".\"digested_event_count\", \"issues_issue\".\"stored_event_count\", \"issues_issue\".\"calculated_type\", \"issues_issue\".\"calculated_value\", \"issues_issue\".\"transaction\", \"issues_issue\".\"last_frame_filename\", \"issues_issue\".\"last_frame_module\", \"issues_issue\".\"last_frame_function\", \"issues_issue\".\"is_resolved\", \"issues_issue\".\"is_resolved_by_next_release\", \"issues_issue\".\"fixed_at\", \"issues_issue\".\"events_at\", \"issues_issue\".\"is_muted\", \"issues_issue\".\"unmute_on_volume_based_conditions\", \"issues_issue\".\"unmute_after\", \"issues_issue\".\"next_unmute_check\" FROM \"issues_issue\" WHERE \"issues_issue\".\"id\" = %s LIMIT 21",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.793940Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MIN(\"events_event\".\"digested_at\") AS \"val\" FROM \"events_event\" WHERE (NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.798961Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MAX(\"events_event\".\"irrelevance_for_retention\") AS \"irrelevance_for_retention__max\" FROM \"events_event\" WHERE (\"events_event\".\"digested_at\" >= %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.801930Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MAX(\"events_event\".\"irrelevance_for_retention\") AS \"irrelevance_for_retention__max\" FROM \"events_event\" WHERE (\"events_event\".\"digested_at\" >= %s AND \"events_event\".\"digested_at\" < %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.804189Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MAX(\"events_event\".\"irrelevance_for_retention\") AS \"irrelevance_for_retention__max\" FROM \"events_event\" WHERE (\"events_event\".\"digested_at\" >= %s AND \"events_event\".\"digested_at\" < %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.806518Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MAX(\"events_event\".\"irrelevance_for_retention\") AS \"irrelevance_for_retention__max\" FROM \"events_event\" WHERE (\"events_event\".\"digested_at\" >= %s AND \"events_event\".\"digested_at\" < %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.808826Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT MAX(\"events_event\".\"irrelevance_for_retention\") AS \"irrelevance_for_retention__max\" FROM \"events_event\" WHERE (\"events_event\".\"digested_at\" < %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.810969Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\" FROM \"events_event\" WHERE (\"events_event\".\"irrelevance_for_retention\" > %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s AND \"events_event\".\"digested_at\" < %s) ORDER BY \"events_event\".\"digest_order\" ASC LIMIT 500",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.813480Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\", \"events_event\".\"storage_backend\" FROM \"events_event\" WHERE (\"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) AND NOT (\"events_event\".\"storage_backend\" IS NULL))",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.815506Z",
+        "type": "default"
+      },
+      {
+        "message": "DELETE FROM \"events_event\" WHERE \"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.816278Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\" FROM \"events_event\" WHERE (\"events_event\".\"irrelevance_for_retention\" > %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s) ORDER BY \"events_event\".\"digest_order\" ASC LIMIT 482",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.817454Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\", \"events_event\".\"storage_backend\" FROM \"events_event\" WHERE (\"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %...",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.821801Z",
+        "type": "default"
+      },
+      {
+        "message": "INSERT INTO \"events_storagecleanuptodo\" (\"event_id\", \"storage_backend\") VALUES (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s), (%s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.825093Z",
+        "type": "default"
+      },
+      {
+        "message": "DELETE FROM \"events_event\" WHERE \"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, ...",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.827103Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\" FROM \"events_event\" WHERE (\"events_event\".\"irrelevance_for_retention\" > %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s AND \"events_event\".\"digested_at\" < %s) ORDER BY \"events_event\".\"digest_order\" ASC LIMIT 124",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.833424Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\", \"events_event\".\"storage_backend\" FROM \"events_event\" WHERE (\"events_event\".\"id\" IN (%s, %s, %s) AND NOT (\"events_event\".\"storage_backend\" IS NULL))",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.835216Z",
+        "type": "default"
+      },
+      {
+        "message": "DELETE FROM \"events_event\" WHERE \"events_event\".\"id\" IN (%s, %s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.835736Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\" FROM \"events_event\" WHERE (\"events_event\".\"irrelevance_for_retention\" > %s AND NOT \"events_event\".\"never_evict\" AND \"events_event\".\"project_id\" = %s AND \"events_event\".\"digested_at\" < %s) ORDER BY \"events_event\".\"digest_order\" ASC LIMIT 121",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.836725Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_event\".\"id\", \"events_event\".\"storage_backend\" FROM \"events_event\" WHERE (\"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) AND NOT (\"events_event\".\"storage_backend\" IS NULL))",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.840547Z",
+        "type": "default"
+      },
+      {
+        "message": "DELETE FROM \"events_event\" WHERE \"events_event\".\"id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.842003Z",
+        "type": "default"
+      },
+      {
+        "type": "log",
+        "level": "info",
+        "category": "bugsink.performance.retention",
+        "message": " 45.77ms EVICT; down to 9500, max irr. from 16 to 14 in 14ms+31ms and 6+13 queries",
+        "timestamp": "2025-02-12T11:18:58.843957Z",
+        "data": {}
+      },
+      {
+        "message": "UPDATE \"projects_project\" SET \"stored_event_count\" = %s WHERE \"projects_project\".\"id\" = %s",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.844387Z",
+        "type": "default"
+      },
+      {
+        "message": "INSERT INTO \"events_event\" (\"id\", \"ingested_at\", \"digested_at\", \"issue_id\", \"grouping_id\", \"event_id\", \"project_id\", \"data\", \"timestamp\", \"platform\", \"level\", \"logger\", \"transaction\", \"server_name\", \"release\", \"dist\", \"environment\", \"sdk_name\", \"sdk_version\", \"debug_info\", \"calculated_type\", \"calculated_value\", \"last_frame_filename\", \"last_frame_module\", \"last_frame_function\", \"digest_order\", \"irrelevance_for_retention\", \"never_evict\", \"storage_backend\") VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.845748Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"releases_release\".\"id\", \"releases_release\".\"project_id\", \"releases_release\".\"version\", \"releases_release\".\"date_released\", \"releases_release\".\"semver\", \"releases_release\".\"is_semver\", \"releases_release\".\"sort_epoch\" FROM \"releases_release\" WHERE (\"releases_release\".\"project_id\" = %s AND \"releases_release\".\"version\" = %s) LIMIT 21",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.846627Z",
+        "type": "default"
+      },
+      {
+        "message": "UPDATE \"issues_issue\" SET \"project_id\" = %s, \"digest_order\" = %s, \"last_seen\" = %s, \"first_seen\" = %s, \"digested_event_count\" = %s, \"stored_event_count\" = %s, \"calculated_type\" = %s, \"calculated_value\" = %s, \"transaction\" = %s, \"last_frame_filename\" = %s, \"last_frame_module\" = %s, \"last_frame_function\" = %s, \"is_resolved\" = %s, \"is_resolved_by_next_release\" = %s, \"fixed_at\" = %s, \"events_at\" = %s, \"is_muted\" = %s, \"unmute_on_volume_based_conditions\" = %s, \"unmute_after\" = NULL, \"next_unmute_check\" = %s WHERE \"issues_issue\".\"id\" = %s",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.847310Z",
+        "type": "default"
+      },
+      {
+        "message": "SELECT \"events_storagecleanuptodo\".\"event_id\", \"events_storagecleanuptodo\".\"storage_backend\" FROM \"events_storagecleanuptodo\" LIMIT 100",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.872035Z",
+        "type": "default"
+      },
+      {
+        "message": "BEGIN IMMEDIATE",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.873007Z",
+        "type": "default"
+      },
+      {
+        "message": "DELETE FROM \"events_storagecleanuptodo\" WHERE \"events_storagecleanuptodo\".\"event_id\" IN (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+        "category": "query",
+        "data": {},
+        "timestamp": "2025-02-12T11:18:58.873360Z",
+        "type": "default"
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(07d90d51-a307-403b-b6ef-e282d7373edd, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.874655Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(09acd653-d50e-490c-bc28-9e6a38040278, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.950907Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(09b25f74-de9e-46b2-bba7-54202864f923, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.953379Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(19b910eb-bf42-416c-8453-25ef80fdca27, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.955500Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(1b2dee59-5dbe-48e4-a5a2-232aa04b28d6, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.958073Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(1bda5b57-0850-4859-ac7e-5a393f13820a, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.960168Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(1ccdde83-aa97-4c28-ac6c-d3be7eb2af2e, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.962226Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(24cffc55-b291-4f2a-9fd8-4dd88ec2d7f6, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.964345Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(254c20c2-0ab1-4eb2-90d0-0e117e76acc4, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.966521Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(27165450-a3ab-4bbf-b776-289f5c668d00, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.968712Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(2bd46ca0-a7bb-41f8-8807-178601036491, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.970970Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(2c501512-f501-493d-9cb4-d02273e817a1, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.973220Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(2f63dca2-5a45-4849-a3d8-062b2ed8cd30, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.975548Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(2fad06b9-5d6b-4034-b22e-4bd8cc503f38, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.977892Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(31a8da9f-790f-443c-8d77-c80758399690, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.980386Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(349bec34-8ddc-4d07-82c8-af69effea31e, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.983012Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(34e4471b-aa56-4e31-bccc-9f7bc5f0fd7c, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.985665Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(37db8fcc-0211-42f5-9a39-8e3edc74ea5a, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.988220Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(3a0ef859-96e8-4ba2-8f96-21293739a26c, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.990832Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(4783f903-563c-498e-b3a2-b740e706301e, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.993509Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(47a0acfe-ef91-4bfc-9216-0dd67ecc014b, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.996252Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(481cdb31-eb23-46e1-b08f-fd1e8169a910, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:58.999018Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(4be76b8c-5ce1-43b0-8827-1dd894905ff2, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.001709Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(4f458b9b-3e12-4b21-bca6-2aa69a4885c7, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.004366Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(4fde68c6-b5dc-4e09-96a6-dd2e018cd922, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.007204Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(503f7837-6e76-45b3-93c6-7e8da357c58c, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.010063Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(5378d4fa-8ba6-4e8b-8289-976a2d885859, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.012886Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(53cbfb2e-c3ff-4dda-b5ec-b8f6d16e42f2, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.015752Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(5454fbcd-7f83-4f66-a1c6-8bffa06441db, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.018583Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(54ba10a6-a663-42a5-abc7-53e8e2ed1a56, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.021454Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(5e60a833-3e1a-4213-a3cb-8ea83b52965c, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.024370Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(659fbc8d-897c-4a8a-9f08-0a87980bfe64, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.027424Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(662a2270-15b8-4cbf-bd01-10ed9e9d357b, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.030378Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(6d3f3e9e-9aca-4dd0-93b5-23310db5c284, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.033458Z",
+        "data": {}
+      },
+      {
+        "type": "log",
+        "level": "error",
+        "category": "events.tasks",
+        "message": "Error during cleanup of StorageCleanupTodo(6fdcfa81-1297-4754-a10b-bce10a304765, local_flat_files): 'StorageCleanupTodo' object has no attribute 'storage_name'",
+        "timestamp": "2025-02-12T11:18:59.036556Z",
+        "data": {}
+      }
+    ]
+  },
+  "modules": {
+    "bugsink": "1.2.0",
+    "pkginfo": "1.10.0",
+    "idna": "3.7",
+    "pyproject_hooks": "1.1.0",
+    "gunicorn": "23.0.0",
+    "click": "8.1.7",
+    "jaraco.context": "6.0.1",
+    "jaraco.functools": "4.1.0",
+    "keyring": "25.4.1",
+    "platformdirs": "4.3.6",
+    "h11": "0.14.0",
+    "docutils": "0.21.2",
+    "pydantic": "2.9.1",
+    "uvicorn": "0.30.1",
+    "charset-normalizer": "3.3.2",
+    "pip": "22.0.2",
+    "importlib_metadata": "8.5.0",
+    "sqlparse": "0.5.0",
+    "ua-parser": "0.18.0",
+    "referencing": "0.35.1",
+    "packaging": "24.0",
+    "sentry-data-schemas": "0.0.1",
+    "uvicorn-worker": "0.2.0",
+    "zope.interface": "6.4.post2",
+    "mypy": "1.11.2",
+    "greenlet": "3.0.3",
+    "semver": "3.0.4",
+    "faker": "28.4.1",
+    "verbose_csrf_middleware": "1.0.4",
+    "pycparser": "2.22",
+    "jaraco.classes": "3.4.0",
+    "pyflakes": "3.2.0",
+    "rstr": "3.2.2",
+    "binaryornot": "0.4.4",
+    "markdown-it-py": "3.0.0",
+    "gevent": "24.2.1",
+    "pygments": "2.19.1",
+    "sentry-sdk": "2.20.0",
+    "requests": "2.32.3",
+    "flake8": "7.1.1",
+    "annotated-types": "0.7.0",
+    "secretstorage": "3.3.3",
+    "jsonschema-typed-v2": "0.8.0",
+    "brotli": "1.1.0",
+    "more-itertools": "10.5.0",
+    "django-admin-autocomplete-filter": "0.7.1",
+    "monofy": "1.1.1",
+    "hey": "0.1.2",
+    "wheel-filename": "1.4.1",
+    "jsonschema": "4.23.0",
+    "inotify_simple": "1.3.5",
+    "squashed-users": "1.0.0",
+    "typing_extensions": "4.12.0",
+    "cryptography": "43.0.1",
+    "user-agents": "2.2.0",
+    "allinone": "0.1.dev6+g6999b87",
+    "pathspec": "0.12.1",
+    "black": "24.8.0",
+    "jinja2": "3.1.4",
+    "urllib3": "2.2.1",
+    "mccabe": "0.7.0",
+    "readme_renderer": "44.0",
+    "sdkconf": "0.1.dev0+d20241118",
+    "arrow": "1.3.0",
+    "text-unidecode": "1.3",
+    "slowloris": "0.2.6",
+    "django-tailwind": "3.6.0",
+    "django-debug-toolbar": "4.4.2",
+    "wrapt": "1.16.0",
+    "django": "4.2.19",
+    "markupsafe": "3.0.1",
+    "twine": "5.1.1",
+    "chardet": "5.2.0",
+    "rich": "13.9.1",
+    "types-python-dateutil": "2.9.0.20241003",
+    "cffi": "1.17.1",
+    "six": "1.16.0",
+    "jsonschema-specifications": "2023.12.1",
+    "python-slugify": "8.0.4",
+    "setuptools": "59.6.0",
+    "smart-open": "7.0.4",
+    "jsf": "0.11.2",
+    "pyyaml": "6.0.2",
+    "mysqlclient": "2.2.4",
+    "whitenoise": "6.8.2",
+    "mdurl": "0.1.2",
+    "backports.tarfile": "1.2.0",
+    "requests-toolbelt": "1.0.0",
+    "cookiecutter": "2.6.0",
+    "fastjsonschema": "2.21.1",
+    "rfc3986": "2.0.0",
+    "zope.event": "5.0",
+    "asgiref": "3.8.1",
+    "tomli": "2.0.1",
+    "dsnrun": "0.1.0",
+    "nh3": "0.2.18",
+    "certifi": "2024.2.2",
+    "rpds-py": "0.18.1",
+    "mypy-extensions": "1.0.0",
+    "build": "1.2.1",
+    "zipp": "3.20.2",
+    "jeepney": "0.8.0",
+    "pydantic_core": "2.23.3",
+    "attrs": "23.2.0",
+    "pycodestyle": "2.12.1",
+    "python-dateutil": "2.9.0.post0"
+  },
+  "request": {
+    "url": "http://bugsink:8000/api/1/envelope/",
+    "query_string": "",
+    "method": "POST",
+    "env": {
+      "SERVER_NAME": "localhost",
+      "SERVER_PORT": "8000",
+      "REMOTE_ADDR": "127.0.0.1"
+    },
+    "headers": {
+      "Content-Length": "40813",
+      "Content-Type": "application/json",
+      "Host": "bugsink:8000",
+      "User-Agent": "python-requests/2.32.3",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept": "*/*",
+      "Connection": "keep-alive",
+      "X-Sentry-Auth": "Sentry sentry_key=e5cbafe9dbf3469e961c02ab2edf37cc, sentry_version=7, sentry_client=bugsink/0.0.1"
+    },
+    "cookies": {}
+  },
+  "user": {
+    "ip_address": "127.0.0.1"
+  },
+  "release": "1.2.0",
+  "environment": "production",
+  "server_name": "pop-os",
+  "sdk": {
+    "name": "sentry.python.django",
+    "version": "2.20.0",
+    "packages": [
+      {
+        "name": "pypi:sentry-sdk",
+        "version": "2.20.0"
+      }
+    ],
+    "integrations": [
+      "argv",
+      "atexit",
+      "dedupe",
+      "django",
+      "excepthook",
+      "logging",
+      "modules",
+      "stdlib",
+      "threading"
+    ]
+  },
+  "platform": "python",
+  "_meta": {
+    "breadcrumbs": {
+      "values": {
+        "21": {
+          "message": {
+            "": {
+              "len": 1595,
+              "rem": [
+                [
+                  "!limit",
+                  "x",
+                  1021,
+                  1024
+                ]
+              ]
+            }
+          }
+        },
+        "23": {
+          "message": {
+            "": {
+              "len": 1488,
+              "rem": [
+                [
+                  "!limit",
+                  "x",
+                  1021,
+                  1024
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
