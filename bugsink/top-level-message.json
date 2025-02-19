@@ -1,0 +1,336 @@
+{
+  "timestamp": "2025-02-13T14:34:25.718Z",
+  "message": {
+    "message": "Error getting videos for user xxx; Failed to communicate with Tiktok API: request timed out"
+  },
+  "logger": "com.example.social.scheduled.handlers.TiktokVideoHandler",
+  "exception": {
+    "values": [
+      {
+        "type": "TiktokBusinessException",
+        "value": "Failed to communicate with Tiktok API: request timed out",
+        "module": "com.example.social.core.external.tiktok.business.errors",
+        "thread_id": 69,
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "VirtualThread.java",
+              "function": "run",
+              "module": "java.lang.VirtualThread",
+              "lineno": 329,
+              "native": false
+            },
+            {
+              "filename": "ThreadPoolExecutor.java",
+              "function": "run",
+              "module": "java.util.concurrent.ThreadPoolExecutor$Worker",
+              "lineno": 642,
+              "native": false
+            },
+            {
+              "filename": "ThreadPoolExecutor.java",
+              "function": "runWorker",
+              "module": "java.util.concurrent.ThreadPoolExecutor",
+              "lineno": 1144,
+              "native": false
+            },
+            {
+              "filename": "FutureTask.java",
+              "function": "run",
+              "module": "java.util.concurrent.FutureTask",
+              "lineno": 317,
+              "native": false
+            },
+            {
+              "filename": "Executors.java",
+              "function": "call",
+              "module": "java.util.concurrent.Executors$RunnableAdapter",
+              "lineno": 572,
+              "native": false
+            },
+            {
+              "filename": "AbstractSupervisor.java",
+              "function": "lambda$startConsumer$0",
+              "module": "com.example.social.scheduled.consumers.AbstractSupervisor",
+              "lineno": 106,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "AbstractConsumer.java",
+              "function": "run",
+              "module": "com.example.social.scheduled.consumers.AbstractConsumer",
+              "lineno": 55,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokVideoConsumer.java",
+              "function": "processItem",
+              "module": "com.example.social.scheduled.consumers.tiktok.TiktokVideoConsumer",
+              "lineno": 13,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokVideoConsumer.java",
+              "function": "processItem",
+              "module": "com.example.social.scheduled.consumers.tiktok.TiktokVideoConsumer",
+              "lineno": 43,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "function": "updateTrackedVideos",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler_ClientProxy",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokVideoHandler.java",
+              "function": "updateTrackedVideos",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler",
+              "lineno": 90,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "function": "getVideos",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler_Subclass",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "InvocationContexts.java",
+              "function": "performAroundInvoke",
+              "module": "io.quarkus.arc.impl.InvocationContexts",
+              "lineno": 27,
+              "native": false
+            },
+            {
+              "filename": "AroundInvokeInvocationContext.java",
+              "function": "perform",
+              "module": "io.quarkus.arc.impl.AroundInvokeInvocationContext",
+              "lineno": 30,
+              "native": false
+            },
+            {
+              "filename": "InterceptorInvocation.java",
+              "function": "invoke",
+              "module": "io.quarkus.arc.impl.InterceptorInvocation",
+              "lineno": 42,
+              "native": false
+            },
+            {
+              "function": "intercept",
+              "module": "io.smallrye.faulttolerance.FaultToleranceInterceptor_Bean",
+              "native": false
+            },
+            {
+              "filename": "FaultToleranceInterceptor.java",
+              "function": "intercept",
+              "module": "io.smallrye.faulttolerance.FaultToleranceInterceptor",
+              "lineno": 206,
+              "native": false
+            },
+            {
+              "filename": "FaultToleranceInterceptor.java",
+              "function": "syncFlow",
+              "module": "io.smallrye.faulttolerance.FaultToleranceInterceptor",
+              "lineno": 368,
+              "native": false
+            },
+            {
+              "filename": "Retry.java",
+              "function": "apply",
+              "module": "io.smallrye.faulttolerance.core.retry.Retry",
+              "lineno": 59,
+              "native": false
+            },
+            {
+              "filename": "Retry.java",
+              "function": "doRetry",
+              "module": "io.smallrye.faulttolerance.core.retry.Retry",
+              "lineno": 69,
+              "native": false
+            },
+            {
+              "filename": "Retry.java",
+              "function": "afterDelay",
+              "module": "io.smallrye.faulttolerance.core.retry.Retry",
+              "lineno": 129,
+              "native": false
+            },
+            {
+              "filename": "Invocation.java",
+              "function": "apply",
+              "module": "io.smallrye.faulttolerance.core.Invocation",
+              "lineno": 29,
+              "native": false
+            },
+            {
+              "filename": "FaultToleranceContext.java",
+              "function": "call",
+              "module": "io.smallrye.faulttolerance.core.FaultToleranceContext",
+              "lineno": 20,
+              "native": false
+            },
+            {
+              "filename": "FaultToleranceInterceptor.java",
+              "function": "lambda$syncFlow$9",
+              "module": "io.smallrye.faulttolerance.FaultToleranceInterceptor",
+              "lineno": 365,
+              "native": false
+            },
+            {
+              "filename": "Future.java",
+              "function": "from",
+              "module": "io.smallrye.faulttolerance.core.Future",
+              "lineno": 83,
+              "native": false
+            },
+            {
+              "filename": "FaultToleranceInterceptor.java",
+              "function": "lambda$syncFlow$8",
+              "module": "io.smallrye.faulttolerance.FaultToleranceInterceptor",
+              "lineno": 365,
+              "native": false
+            },
+            {
+              "filename": "AroundInvokeInvocationContext.java",
+              "function": "proceed",
+              "module": "io.quarkus.arc.impl.AroundInvokeInvocationContext",
+              "lineno": 62,
+              "native": false
+            },
+            {
+              "filename": "AroundInvokeInvocationContext.java",
+              "function": "proceed",
+              "module": "io.quarkus.arc.impl.AroundInvokeInvocationContext",
+              "lineno": 73,
+              "native": false
+            },
+            {
+              "function": "apply",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler_Subclass$$function$$1",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "function": "getVideos$$superforward",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler_Subclass",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokVideoHandler.java",
+              "function": "getVideos",
+              "module": "com.example.social.scheduled.handlers.TiktokVideoHandler",
+              "lineno": 217,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "function": "getVideos",
+              "module": "com.example.social.core.external.tiktok.TikTokApiImpl_ClientProxy",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TikTokApiImpl.java",
+              "function": "getVideos",
+              "module": "com.example.social.core.external.tiktok.TikTokApiImpl",
+              "lineno": 151,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "function": "getVideos",
+              "module": "com.example.social.core.external.tiktok.business.TiktokBusinessApiImpl_ClientProxy",
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokBusinessApiImpl.java",
+              "function": "getVideos",
+              "module": "com.example.social.core.external.tiktok.business.TiktokBusinessApiImpl",
+              "lineno": 212,
+              "in_app": true,
+              "native": false
+            },
+            {
+              "filename": "TiktokBusinessApiImpl.java",
+              "function": "sendRequest",
+              "module": "com.example.social.core.external.tiktok.business.TiktokBusinessApiImpl",
+              "lineno": 262,
+              "in_app": true,
+              "native": false
+            }
+          ]
+        },
+        "mechanism": {
+          "type": "JulSentryHandler"
+        }
+      }
+    ]
+  },
+  "level": "error",
+  "fingerprint": [],
+  "modules": {
+    "commons-cli.commons-cli": "1.8.0",
+    "io.smallrye.common.smallrye-common-ref": "2.9.0",
+    "com.google.protobuf.protobuf-java-util": "3.25.5",
+    "io.smallrye.smallrye-jwt": "4.6.1"
+  },
+  "event_id": "75446cf0a4434a45816084963687c2eb",
+  "contexts": {
+    "runtime": {
+      "name": "Red Hat, Inc.",
+      "version": "21.0.6"
+    },
+    "trace": {
+      "trace_id": "96e22e7c9c7d4964874242bad8b8ff7d",
+      "span_id": "91dbb700cff14523",
+      "op": "default",
+      "origin": "manual"
+    }
+  },
+  "sdk": {
+    "name": "sentry.java",
+    "version": "7.8.0",
+    "packages": [
+      {
+        "name": "maven:io.sentry:sentry",
+        "version": "7.8.0"
+      },
+      {
+        "name": "maven:io.sentry:sentry-jul",
+        "version": "7.8.0"
+      }
+    ],
+    "integrations": [
+      "UncaughtExceptionHandler",
+      "ShutdownHook",
+      "Jul"
+    ]
+  },
+  "release": "v1.67.0",
+  "environment": "production",
+  "platform": "java",
+  "user": {
+    "ip_address": "{{auto}}"
+  },
+  "server_name": "example",
+  "breadcrumbs": [
+    {
+      "timestamp": "2025-02-13T14:34:25.718Z",
+      "message": "Failed to send request to Tiktok API",
+      "data": {},
+      "category": "com.example.social.core.external.tiktok.business.TiktokBusinessApiImpl",
+      "level": "error"
+    }
+  ],
+  "extra": {
+    "thread_id": 69
+  }
+}
