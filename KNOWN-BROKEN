@@ -3,3 +3,4 @@ bugsink/headers_as_lists.json
 bugsink/top-level-message.json
 bugsink/top-level-logentry-as-str.json
 bugsink/top-level-message-as-str.json
+bugsink/user-id-as-int.json
