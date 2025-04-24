@@ -1,0 +1,28 @@
+{
+  "environment": "production",
+  "event_id": "fff1050314a3433a823cfedec50f312f",
+  "level": "error",
+  "message": "I am the GO SDK and I'm sorry I put a string here",
+  "platform": "go",
+  "release": "v1.0.0",
+  "sdk": {
+    "name": "sentry.go",
+    "version": "0.31.1",
+    "integrations": [
+      "ContextifyFrames",
+      "Environment",
+      "GlobalTags",
+      "IgnoreErrors",
+      "IgnoreTransactions",
+      "Modules"
+    ],
+    "packages": [
+      {
+        "name": "sentry-go",
+        "version": "0.31.1"
+      }
+    ]
+  },
+  "server_name": "foobar",
+  "timestamp": "2025-03-06T10:19:51.132514327Z"
+}

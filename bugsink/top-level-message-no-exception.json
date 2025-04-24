@@ -1,0 +1,66 @@
+{
+  "timestamp": "2025-02-13T14:34:25.718Z",
+  "message": {
+    "message": "Error getting videos for user xxx; Failed to communicate with Tiktok API: request timed out"
+  },
+  "logger": "com.example.social.scheduled.handlers.TiktokVideoHandler",
+  "level": "error",
+  "fingerprint": [],
+  "modules": {
+    "commons-cli.commons-cli": "1.8.0",
+    "io.smallrye.common.smallrye-common-ref": "2.9.0",
+    "com.google.protobuf.protobuf-java-util": "3.25.5",
+    "io.smallrye.smallrye-jwt": "4.6.1"
+  },
+  "event_id": "75446cf0a4434a45816084963687c2eb",
+  "contexts": {
+    "runtime": {
+      "name": "Red Hat, Inc.",
+      "version": "21.0.6"
+    },
+    "trace": {
+      "trace_id": "96e22e7c9c7d4964874242bad8b8ff7d",
+      "span_id": "91dbb700cff14523",
+      "op": "default",
+      "origin": "manual"
+    }
+  },
+  "sdk": {
+    "name": "sentry.java",
+    "version": "7.8.0",
+    "packages": [
+      {
+        "name": "maven:io.sentry:sentry",
+        "version": "7.8.0"
+      },
+      {
+        "name": "maven:io.sentry:sentry-jul",
+        "version": "7.8.0"
+      }
+    ],
+    "integrations": [
+      "UncaughtExceptionHandler",
+      "ShutdownHook",
+      "Jul"
+    ]
+  },
+  "release": "v1.67.0",
+  "environment": "production",
+  "platform": "java",
+  "user": {
+    "ip_address": "{{auto}}"
+  },
+  "server_name": "example",
+  "breadcrumbs": [
+    {
+      "timestamp": "2025-02-13T14:34:25.718Z",
+      "message": "Failed to send request to Tiktok API",
+      "data": {},
+      "category": "com.example.social.core.external.tiktok.business.TiktokBusinessApiImpl",
+      "level": "error"
+    }
+  ],
+  "extra": {
+    "thread_id": 69
+  }
+}
