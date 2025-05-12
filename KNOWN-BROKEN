@@ -6,3 +6,4 @@ bugsink/top-level-message-as-str.json
 bugsink/top-level-message-as-str-no-exception.json
 bugsink/top-level-message-no-exception.json
 bugsink/user-id-as-int.json
+sentry/custom-fingerprint-int.json
