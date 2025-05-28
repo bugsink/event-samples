@@ -1,1 +1,94 @@
-{"exception": {"values": [{"type": "Error", "value": "Sentry Test Error", "stacktrace": {"frames": [{"filename": "file:///mnt/datacrypt/dev/mksourcemaps/index.html", "function": "onclick", "in_app": true, "lineno": 1, "colno": 1}, {"filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js", "function": "captureException", "in_app": true, "lineno": 3, "colno": 121}, {"filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js", "function": "foo", "in_app": true, "lineno": 3, "colno": 87}, {"filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js", "function": "bar", "in_app": true, "lineno": 3, "colno": 40}]}, "mechanism": {"type": "generic", "handled": true}}]}, "level": "error", "event_id": "af4d4093e2d548bea61683abecb8ee95", "platform": "javascript", "request": {"url": "file:///mnt/datacrypt/dev/mksourcemaps/index.html", "headers": {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"}}, "timestamp": 1744286109.372, "environment": "production", "release": "my-project-name@2.3.12", "sdk": {"integrations": ["InboundFilters", "FunctionToString", "BrowserApiErrors", "Breadcrumbs", "GlobalHandlers", "LinkedErrors", "Dedupe", "HttpContext", "BrowserSession"], "name": "sentry.javascript.browser", "version": "9.11.0", "packages": [{"name": "cdn:@sentry/browser", "version": "9.11.0"}]}, "debug_meta": {"images": [{"type": "sourcemap", "code_file": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js", "debug_id": "9b7990f8-1f25-571a-a422-03bea91eb8ab"}]}, "contexts": {"trace": {"trace_id": "4bc9b27283804a4fa7c00d0e7bb0dd9d", "span_id": "a53d36acc6efebf0"}}}
+{
+  "exception": {
+    "values": [
+      {
+        "type": "Error",
+        "value": "Sentry Test Error",
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "file:///mnt/datacrypt/dev/mksourcemaps/index.html",
+              "function": "onclick",
+              "in_app": true,
+              "lineno": 1,
+              "colno": 1
+            },
+            {
+              "filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js",
+              "function": "captureException",
+              "in_app": true,
+              "lineno": 3,
+              "colno": 121
+            },
+            {
+              "filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js",
+              "function": "foo",
+              "in_app": true,
+              "lineno": 3,
+              "colno": 87
+            },
+            {
+              "filename": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js",
+              "function": "bar",
+              "in_app": true,
+              "lineno": 3,
+              "colno": 40
+            }
+          ]
+        },
+        "mechanism": {
+          "type": "generic",
+          "handled": true
+        }
+      }
+    ]
+  },
+  "level": "error",
+  "event_id": "af4d4093e2d548bea61683abecb8ee95",
+  "platform": "javascript",
+  "request": {
+    "url": "file:///mnt/datacrypt/dev/mksourcemaps/index.html",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0"
+    }
+  },
+  "timestamp": 1744286109.372,
+  "environment": "production",
+  "release": "my-project-name@2.3.12",
+  "sdk": {
+    "integrations": [
+      "InboundFilters",
+      "FunctionToString",
+      "BrowserApiErrors",
+      "Breadcrumbs",
+      "GlobalHandlers",
+      "LinkedErrors",
+      "Dedupe",
+      "HttpContext",
+      "BrowserSession"
+    ],
+    "name": "sentry.javascript.browser",
+    "version": "9.11.0",
+    "packages": [
+      {
+        "name": "cdn:@sentry/browser",
+        "version": "9.11.0"
+      }
+    ]
+  },
+  "debug_meta": {
+    "images": [
+      {
+        "type": "sourcemap",
+        "code_file": "file:///mnt/datacrypt/dev/mksourcemaps/captureException.min.js",
+        "debug_id": "9b7990f8-1f25-571a-a422-03bea91eb8ab"
+      }
+    ]
+  },
+  "contexts": {
+    "trace": {
+      "trace_id": "4bc9b27283804a4fa7c00d0e7bb0dd9d",
+      "span_id": "a53d36acc6efebf0"
+    }
+  }
+}
