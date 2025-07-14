@@ -1,0 +1,103 @@
+{
+  "level": "error",
+  "exception": {
+    "values": [
+      {
+        "mechanism": {
+          "type": "generic",
+          "handled": true
+        },
+        "module": "issues.regressions",
+        "type": "CrystalPlatform",
+        "value": "not actually crystal, simply setting platform like so to trigger pygments_extensions",
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "filename_no_extension_to_avoid_guess_lexer_for_filename_and_trigger_bug",
+              "abs_path": "/foor/bar/filename_no_extension_to_avoid_guess_lexer_for_filename_and_trigger_bug",
+              "function": "complete_with_both",
+              "module": "__main__",
+              "lineno": 22,
+              "pre_context": [
+                "        ) from exc",
+                "    execute_from_command_line(sys.argv)",
+                "",
+                "",
+                "if __name__ == '__main__':"
+              ],
+              "context_line": "    main()",
+              "post_context": [],
+              "vars": {
+                "__name__": "'__main__'",
+                "__doc__": "\"Django's command-line utility for administrative tasks.\"",
+                "__package__": "None",
+                "__loader__": "<_frozen_importlib_external.SourceFileLoader object at 0x7fe00fb21810>",
+                "__spec__": "None",
+                "__annotations__": {},
+                "__builtins__": "<module 'builtins' (built-in)>",
+                "__file__": "'/mnt/datacrypt/dev/bugsink/manage.py'",
+                "__cached__": "None",
+                "os": "<module 'os' from '/usr/lib/python3.10/os.py'>"
+              },
+              "in_app": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "event_id": "fff7744d8c5e4e4ba56fa09ca37a4888",
+  "timestamp": "2024-03-19T11:50:26.499710Z",
+  "breadcrumbs": {
+    "values": [] 
+  },
+  "transaction_info": {},
+  "contexts": {
+    "trace": {
+      "trace_id": "99fcee211b7c46dc89860abe9b06dc7f",
+      "span_id": "a0430fde8983084f",
+      "parent_span_id": null
+    },
+    "runtime": {
+      "name": "CPython",
+      "version": "3.10.12",
+      "build": "3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]"
+    }
+  },
+  "extra": {
+    "sys.argv": [
+      "manage.py",
+      "test"
+    ]
+  },
+  "modules": {
+    "click": "8.1.7"
+  },
+  "release": "28ef218b61a2ab33db5d9bcee53c3b1875e97e00",
+  "environment": "production",
+  "server_name": "pop-os",
+  "sdk": {
+    "name": "sentry.python.django",
+    "version": "1.32.0",
+    "packages": [
+      {
+        "name": "pypi:sentry-sdk",
+        "version": "1.32.0"
+      }
+    ],
+    "integrations": [
+      "argv",
+      "atexit",
+      "celery",
+      "dedupe",
+      "django",
+      "excepthook",
+      "logging",
+      "modules",
+      "redis",
+      "stdlib",
+      "threading"
+    ]
+  },
+  "platform": "crystal"
+}
