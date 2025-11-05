@@ -1,8 +1,12 @@
-This repository contains some "event" (sentry-compatible) samples that can be used for testing.
+This repository contains some "event" (sentry-compatible) samples that can be used for testing,
+as well as minidump samples.
 
 The events are sourced from the sentry and glitchtip codebases, as per the directory structure.
 
 Authorship and licensing information is as follows:
 
+* The files in the `bugsink` directory are copyright by Bugsink; MIT licenced.
 * The files in the `glitchtip` directory are copyright by Glitchtip; MIT licenced.
 * The files in the `sentry` directory are copyright by Sentry; Apache 2.0 licenced.
+* The files in the `minidumps` directory are sourced from Google Breakpad; see the
+  `minidumps/README.md` file for more information.
