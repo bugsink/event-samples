@@ -7,3 +7,5 @@ bugsink/top-level-message-as-str-no-exception.json
 bugsink/top-level-message-no-exception.json
 bugsink/user-id-as-int.json
 sentry/custom-fingerprint-int.json
+bugsink/exception_no_frames.json
+bugsink/exception_null_frames.json
