@@ -1,0 +1,168 @@
+{
+  "event_id": "b6ec2f718ef34a5aa0d7f3f6e07f1111",
+  "timestamp": "2026-06-20T09:15:00Z",
+  "platform": "python",
+  "level": "error",
+  "logger": "visualshots.checkout",
+  "release": "visualshots@2026.06.20+abc123def4567890",
+  "environment": "review",
+  "server_name": "visualshots-worker-01",
+  "transaction": "/checkout/<cart_id>/confirm",
+  "message": {
+    "message": "Checkout failed for cart %(cart_id)s",
+    "formatted": "Checkout failed for cart cart_12345",
+    "params": {
+      "cart_id": "cart_12345",
+      "payment_provider": "example-pay"
+    }
+  },
+  "exception": {
+    "values": [
+      {
+        "type": "VisualshotsCheckoutError",
+        "value": "Could not complete payment authorization",
+        "mechanism": {
+          "type": "generic",
+          "handled": false
+        },
+        "stacktrace": {
+          "frames": [
+            {
+              "filename": "visualshots/app.py",
+              "function": "complete_with_code_and_vars",
+              "lineno": 42,
+              "in_app": true,
+              "pre_context": [
+                "def complete_with_code_and_vars(cart):",
+                "    provider = get_provider(cart)",
+                "    payload = build_payload(cart)"
+              ],
+              "context_line": "    return provider.authorize(payload)",
+              "post_context": [
+                "",
+                "def complete_with_vars_only(cart):"
+              ],
+              "vars": {
+                "cart_id": "'cart_12345'",
+                "provider": "'example-pay'",
+                "payload": {
+                  "amount": 4999,
+                  "currency": "EUR",
+                  "customer": "cus_visualshots"
+                }
+              }
+            },
+            {
+              "filename": "visualshots/app.py",
+              "function": "complete_with_vars_only",
+              "in_app": true,
+              "vars": {
+                "retry_count": 2,
+                "last_status": "'gateway-timeout'",
+                "incomplete": 17
+              }
+            },
+            {
+              "filename": "visualshots/payment.py",
+              "function": "complete_with_code_only",
+              "lineno": 88,
+              "in_app": true,
+              "pre_context": [
+                "class PaymentClient:",
+                "    def authorize(self, payload):",
+                "        response = self.session.post('/authorize', json=payload)"
+              ],
+              "context_line": "        response.raise_for_status()",
+              "post_context": [
+                "        return response.json()"
+              ]
+            },
+            {
+              "filename": "requests/sessions.py",
+              "function": "request",
+              "in_app": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "request": {
+    "url": "https://shop.example.invalid/checkout/cart_12345/confirm",
+    "method": "POST",
+    "query_string": "step=payment&source=visualshots",
+    "headers": {
+      "User-Agent": "Visualshots Browser/1.0",
+      "Accept": "text/html,application/xhtml+xml",
+      "X-Request-ID": "req-visualshots-123"
+    },
+    "env": {
+      "REMOTE_ADDR": "203.0.113.42",
+      "SERVER_NAME": "shop.example.invalid"
+    }
+  },
+  "user": {
+    "id": "user-visualshots",
+    "email": "customer@example.invalid",
+    "username": "visualshots-customer",
+    "ip_address": "203.0.113.42"
+  },
+  "tags": {
+    "browser": "Firefox 126",
+    "region": "eu-west",
+    "tenant": "visualshots"
+  },
+  "breadcrumbs": {
+    "values": [
+      {
+        "timestamp": "2026-06-20T09:14:57Z",
+        "type": "navigation",
+        "category": "ui",
+        "message": "Opened checkout confirmation page"
+      },
+      {
+        "timestamp": "2026-06-20T09:14:58Z",
+        "type": "http",
+        "category": "payment",
+        "message": "POST /authorize returned 504"
+      },
+      {
+        "timestamp": "2026-06-20T09:15:00Z",
+        "type": "error",
+        "category": "checkout",
+        "message": "Payment authorization failed"
+      }
+    ]
+  },
+  "contexts": {
+    "runtime": {
+      "name": "CPython",
+      "version": "3.12.4"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "126.0"
+    },
+    "os": {
+      "name": "Ubuntu",
+      "version": "24.04"
+    }
+  },
+  "modules": {
+    "bugsink": "2.6.0",
+    "django": "5.2.0",
+    "requests": "2.32.3"
+  },
+  "sdk": {
+    "name": "visualshots.python",
+    "version": "0.1.0"
+  },
+  "extra": {
+    "cart_total": "49.99",
+    "feature_flags": [
+      "new-checkout",
+      "payment-retry"
+    ],
+    "notes": "Purpose-built sample for broad Bugsink UI rendering coverage."
+  }
+}
