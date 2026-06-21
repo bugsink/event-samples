@@ -8,7 +8,7 @@
   "environment": "review",
   "server_name": "visualshots-worker-01",
   "transaction": "/checkout/<cart_id>/confirm",
-  "message": {
+  "logentry": {
     "message": "Checkout failed for cart %(cart_id)s",
     "formatted": "Checkout failed for cart cart_12345",
     "params": {
